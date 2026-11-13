@@ -108,7 +108,7 @@ export const Logo: React.FC<LogoProps> = ({ className = 'h-10', variant = 'full'
           </span>
           {variant === 'full' && (
             <span className="hidden sm:inline-block text-[9px] px-1.5 py-0.2 bg-[#d32f2f]/10 text-[#d32f2f] font-bold rounded">
-              NIT 900302280-2
+              NIT 900302289-2
             </span>
           )}
         </div>

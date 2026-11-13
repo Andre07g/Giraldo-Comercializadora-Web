@@ -99,7 +99,7 @@ export const Footer: React.FC = () => {
                 <div>
                   <div className="font-semibold text-white">Lunes a Viernes:</div>
                   <div>8:00 a.m. a 12:00 m.</div>
-                  <div>2:00 p.m. a 6:00 p.m.</div>
+                  <div>2:00 p.m. a 5:30 p.m.</div>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">

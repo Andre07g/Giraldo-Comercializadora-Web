@@ -51,3 +51,9 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 - Confirmados por SHA-256 dos duplicados exactos más (soldadura y placas Prodeco).
 - Del Plan de Mejoras se registraron los pendientes en [[pendientes]] (rocería/roscería, horario L–V, misión/visión 2029, logo, fotos por línea, datos para política). No se abrieron los ZIP.
 - `npm run lint` y `npm run build` pasan. No se cambió el código del sitio. Vista previa visual sigue pendiente.
+
+## [2026-11-13] respuestas de la usuaria y datos aplicados
+- La usuaria respondió: NIT `900302289-2`; línea «Rocería» (limpieza y corte de maleza, poda de árboles); horario 8:00–12:00 y 2:00–5:30 p. m.; fachada y antes/después son reales.
+- Se catalogaron 8 imágenes nuevas (rocería, fumigación, cuadrilla, 2 logos, láminas de vías y obras eléctricas) en [[documentos-y-activos]].
+- Código: NIT corregido en 3 archivos; horario de L–V unificado a 5:30 p. m. en datos y pie de página (el pie y el contacto no coincidían). `npm run lint` y `npm run build` pasan. Sin revisión visual.
+- Pendiente de este paso: sección de servicios con las 5 líneas y fotos reales (paso 4 del plan).

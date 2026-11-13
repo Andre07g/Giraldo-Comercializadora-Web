@@ -36,7 +36,7 @@ export interface ClientPartner {
 export const COMPANY_INFO = {
   name: "Giraldo Ramírez Comercializadora Ltda.",
   shortName: "Giraldo Ramírez",
-  nit: "900302280-2",
+  nit: "900302289-2",
   foundationYear: "2009",
   slogan: "Construyendo para un futuro mejor.",
   phones: [
@@ -53,7 +53,7 @@ export const COMPANY_INFO = {
     bosconia: "Bosconia, Cesar"
   },
   hours: {
-    weekdays: "Lunes a Viernes: 8:00 a.m. a 12:00 m. / 2:00 p.m. a 6:00 p.m.",
+    weekdays: "Lunes a Viernes: 8:00 a.m. a 12:00 m. / 2:00 p.m. a 5:30 p.m.",
     saturdays: "Sábados: 8:00 a.m. a 12:00 m."
   },
   mission: "GIRALDO RAMÍREZ COMERCIALIZADORA LTDA. es una compañía dedicada a la ejecución de proyectos de ingeniería, obras civiles, mantenimiento de vías, redes eléctricas, proyectos ambientales, suministro de personal y logística operativa, apoyada en talento humano calificado y garantizando el cumplimiento de normas de calidad, seguridad y salud en el trabajo (SG-SST) y protección del medio ambiente, generando valor a nuestros clientes, colaboradores y comunidades de nuestra región.",

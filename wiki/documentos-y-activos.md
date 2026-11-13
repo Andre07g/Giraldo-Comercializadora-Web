@@ -57,6 +57,19 @@ fuentes: ["DOC/", "C:/Users/Windows/Desktop/PROTOTIPO WEB/FOTO EMPRESA GIRALDO R
 | `DOC/WhatsApp Video 2026-11-12 at 5.08.27 PM.mp4` (5.4 MB), `DOC/WhatsApp Video 2026-11-12 at 5.0cc8.27 PM.mp4` (6.3 MB), `DOC/WhatsApp Video 2026ewe-11-12 at 5.08.27 PM.mp4` (0.45 MB) | Tres videos con hashes distintos (no son duplicados exactos). | Posibles muestras de obra. | No reproducidos. |
 | `Plan de Mejoras/05-giraldo-ramirez-comercializadora-ltda/` (`plan-mejoras.md`, `validacion-con-cliente.md`, `mensaje-whatsapp.md`, `instalar-skills.md` y 3 ZIP de skills) | Paquete del facilitador: plan de 12 pasos, hoja de validación y mensajes. Se leyeron `plan-mejoras.md` y `validacion-con-cliente.md`; los ZIP no se abrieron ni se ejecutaron. | Guía de trabajo: logo/fotos propias, cinco líneas de servicio, misión/visión 2029, horario, política de datos, SEO. Fuera de `DOC/`; no versionado en Git. | Leído como evidencia. Ver [[pendientes]]. |
 
+## Material nuevo, segunda tanda (2026-11-13, tras las respuestas de la usuaria)
+La usuaria confirmó que las imágenes de WhatsApp (fachada, antes/después) **son reales y trabajos de la empresa**. Autenticidad: confirmada por la usuaria.
+| Ruta original | Categoría y observación visual | Posible uso | Estado |
+|---|---|---|---|
+| `DOC/WhatsApp Image 2026-11-13 at 10.19.59 AM.jpeg` | Rocería: operario con machete cortando maleza/ramas. | Línea rocería (corte de maleza). | Vista. Lista para usar (comprimir). |
+| `DOC/WhatsApp Image 20eee26-11-13 at 10.20.01 AM.jpeg` | Operario en traje blanco fumigando junto a tanques. Control de vegetación. | Línea rocería/mantenimiento de áreas. | Vista. Lugar/cliente no identificado. |
+| `DOC/WhatsApp Image 2026-11-13 at 10.20.00 ffffffAM.jpeg` | Cuadrilla uniformada con casco y chaleco en la vía, con supervisora. | Equipo / vías. | Vista. |
+| `DOC/WhatsApp Image 2026-11-13 at 10.20.00 AM.jpeg` | **Logo** horizontal con NIT `900302280-2`, web, correo, teléfono fijo y celular. | Logo, pero con NIT viejo: no usar tal cual. | Vista. Versión con NIT erróneo. |
+| `DOC/WhatsApp Image 2026-11-13 at 10.2ggg0.00 AM.jpeg` | **Logo** horizontal con NIT `900302289-2` y correo `gr.comercializadora1@gmail.com`, sin teléfonos. | Candidato a logo oficial (NIT correcto). Calidad media. | Vista. Pendiente confirmar que es el oficial. |
+| `DOC/WhatsApp Image 2026-11-13 at eeee10.20.01 AM.jpeg` | Lámina "Señalización de vías": 8 fotos (Navelena, Consol, Campamento Aguachica). Parece composición gráfica. | Línea vías. Contiene marcas de terceros. | Vista. Autorización de marcas pendiente. |
+| `DOC/rrr.jpeg` | Lámina "Obras eléctricas" con 10 trabajos (Yuma, Navelena, Consol, etc.). | Línea obras eléctricas. Marcas de terceros. | Vista. Autorización pendiente. |
+| `DOC/33333.jpeg` | Lámina "Obras eléctricas": subestación/planta eléctrica con tanque y cerca. | Línea obras eléctricas. | Vista. |
+
 ## Activos existentes en el sitio
 | Ruta del proyecto | Uso actual | Referencia original |
 |---|---|---|

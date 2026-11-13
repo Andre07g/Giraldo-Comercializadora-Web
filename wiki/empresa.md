@@ -31,3 +31,9 @@ fuentes: ["DOC/Deseo organizar de manera más clara el prototipo de la página w
 - **Pendiente:** misión y visión difieren entre documento y sitio, incluido el año objetivo 2028 frente a 2029.
 
 Ver [[documentos-y-activos]] para las fuentes y [[decisiones]] para las decisiones de contenido.
+
+## Datos confirmados por la usuaria (2026-11-13)
+- **Confirmado:** NIT `900302289-2`. Aplicado en `src/data/companyData.ts`, `index.html` y `src/components/Logo.tsx`.
+- **Confirmado:** la línea se llama **Rocería**: limpieza y corte de maleza, poda de árboles.
+- **Confirmado:** horario de atención 8:00 a. m.–12:00 m. y 2:00 p. m.–5:30 p. m. (la usuaria no escribió los días; se aplicó a lunes a viernes, **supuesto razonable**). Sábados 8:00 a. m.–12:00 m. (del plan del facilitador).
+- **Confirmado:** las fotos de fachada y antes/después son reales, de trabajos y sede de la empresa.
