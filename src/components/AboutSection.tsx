@@ -81,10 +81,10 @@ export const AboutSection: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
               <div className="bg-[#eff4ff] rounded-xl p-4 border border-blue-100">
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#0f2444] tabular-nums">
-                  100%
+                  5 Líneas
                 </div>
                 <div className="text-xs sm:text-sm font-semibold text-slate-700 mt-0.5">
-                  Cumplimiento en regulaciones técnicas y de SG-SST
+                  de servicio: metalmecánica, vías, rocería, obras eléctricas y obra civil
                 </div>
               </div>
               <div className="bg-[#eff4ff] rounded-xl p-4 border border-blue-100">

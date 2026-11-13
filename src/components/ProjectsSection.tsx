@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowUpRight, MapPin, Calendar, CheckCircle2, ChevronRight } from 'lucide-react';
 import { PROJECTS_LIST, Project } from '../data/companyData';
 
@@ -11,12 +11,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   onSelectProject,
   onRequestQuote,
 }) => {
-  const [filter, setFilter] = useState<string>('all');
 
-  const filteredProjects = PROJECTS_LIST.filter((p) => {
-    if (filter === 'all') return true;
-    return p.category === filter;
-  });
+  const filteredProjects = PROJECTS_LIST;
 
   return (
     <section id="proyectos" className="py-20 bg-white">
@@ -32,8 +28,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               Proyectos que reflejan nuestra experiencia
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-              Obras ejecutadas con cumplimiento riguroso de normas técnicas, plazos y presupuesto garantizado
-              en el Cesar, Santander y el Caribe.
+              Algunos de nuestros trabajos en obra civil, vías, señalización y obras eléctricas.
             </p>
           </div>
 
@@ -46,61 +41,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           </button>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2">
-          <button
-            onClick={() => setFilter('all')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              filter === 'all'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Todos los Proyectos ({PROJECTS_LIST.length})
-          </button>
-          <button
-            onClick={() => setFilter('civil')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              filter === 'civil'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Obras Civiles y Minería
-          </button>
-          <button
-            onClick={() => setFilter('vial')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              filter === 'vial'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Infraestructura Vial
-          </button>
-          <button
-            onClick={() => setFilter('hidraulica')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              filter === 'hidraulica'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Obras Hidráulicas
-          </button>
-          <button
-            onClick={() => setFilter('facilidades')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              filter === 'facilidades'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Facilidades & Campamentos
-          </button>
-        </div>
-
-        {/* 6-Card Grid */}
+        {/* Proyectos documentados */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
@@ -127,10 +68,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   <div className="absolute top-3 left-3 px-3 py-1 bg-[#000e27]/85 backdrop-blur-sm rounded text-[10px] font-bold text-white tracking-wider uppercase">
                     {project.contractTag}
                   </div>
-                  {/* Status */}
-                  <div className="absolute top-3 right-3 px-2.5 py-0.5 bg-emerald-600/90 text-white rounded text-[10px] font-bold">
-                    {project.status}
-                  </div>
                 </div>
 
                 {/* Content */}
@@ -147,10 +84,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       <MapPin className="w-3.5 h-3.5 text-[#d32f2f] shrink-0" />
                       <span className="truncate">{project.location}</span>
                     </span>
-                    <span className="flex items-center gap-1 font-semibold text-slate-700 shrink-0">
-                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                      <span>{project.year}</span>
-                    </span>
+                    {project.year && (
+                      <span className="flex items-center gap-1 font-semibold text-slate-700 shrink-0">
+                        <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                        <span>{project.year}</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

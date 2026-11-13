@@ -32,6 +32,7 @@ fuentes: ["package.json", "README.md", "AGENTS.md"]
 - 2026-11-13: se ingresó material nuevo (3 imágenes y 3 videos de WhatsApp; paquete `Plan de Mejoras/`). `npm run lint` y `npm run build` siguen pasando. El servidor local no estaba activo al iniciar la sesión.
 
 - 2026-11-13: sección de servicios con las cinco líneas y fotos reales; NIT y horario corregidos. Compila; sin revisión visual.
+- 2026-11-13: logo oficial, proyectos documentados y claims sin respaldo retirados. Compila; sin revisión visual (extensión de Chrome sin conexión).
 
 ## Próximo paso
 - Seguir el Plan de Mejoras en orden. Paso 2 (logo y fotos propias) es el más avanzado: falta el logo oficial y decidir qué fotos son reales. Ver [[pendientes]].

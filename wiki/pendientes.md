@@ -39,6 +39,6 @@ fuentes: ["DOC/", "src/data/companyData.ts", "index.html"]
 ## Tras el paso 4 (2026-11-13)
 - **Pendiente:** revisar visualmente las cinco tarjetas y el modal en escritorio y móvil (el navegador no estaba conectado).
 - **Pendiente:** la lámina de vías y la de obras eléctricas son composiciones con letras; ampliarlas muestra baja nitidez. Mejor reemplazar por fotos individuales cuando existan.
-- **Pendiente:** la sección Proyectos y las métricas siguen con contenido heredado del prototipo (cifras, Calenturitas, etc.) sin fuente; sus imágenes usan rutas `/src/assets/...` que no funcionan en el sitio compilado.
-- **Pendiente:** poner el logo oficial (NIT `...289-2`) en la cabecera; hoy el logo es el del prototipo.
+- **Resuelto 2026-11-13:** Proyectos reescrito con 4 obras documentadas (Canal Alamosa, vivienda, señalización, obras eléctricas), sin cifras, años ni estados. **Pendiente:** ubicación de la vivienda, clientes y fechas reales. Siguen por revisar Clientes y Noticias (contenido del prototipo).
+- **Resuelto:** emblema oficial en cabecera y pie (recorte del logo NIT `...289-2`); el texto sigue como texto. Revisar visualmente.
 - **Pendiente:** misión y visión: falta el documento institucional.

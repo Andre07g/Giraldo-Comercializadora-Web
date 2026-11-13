@@ -146,11 +146,8 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({
                     <div key={p.id} className="p-2.5 bg-slate-50 rounded-lg flex items-center justify-between">
                       <div>
                         <span className="font-bold text-[#0f2444]">{p.title}</span>
-                        <span className="text-slate-500 text-[11px] block">{p.location} · {p.client}</span>
+                        <span className="text-slate-500 text-[11px] block">{p.location}</span>
                       </div>
-                      <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded">
-                        {p.status}
-                      </span>
                     </div>
                   ))}
                 </div>
@@ -221,10 +218,6 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({
                   <div>
                     <span className="text-slate-400 block font-medium">Fecha de Constitución:</span>
                     <span>Año 2009</span>
-                  </div>
-                  <div>
-                    <span className="text-slate-400 block font-medium">Cumplimiento SG-SST:</span>
-                    <span>100% Implementado y Verificado</span>
                   </div>
                 </div>
               </div>

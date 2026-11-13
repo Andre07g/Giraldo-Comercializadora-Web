@@ -64,3 +64,9 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 - `ServicesSection.tsx`: sin filtros de 9 servicios, textos de cabecera, Hero y pie ajustados a las cinco líneas.
 - Corregí un intercambio en el catálogo entre `33333.jpeg` y `20eee26...jpeg`.
 - `npm run lint` y `npm run build` pasan. Navegador no conectado: sin revisión visual.
+
+## [2026-11-13] logo y proyectos
+- Emblema oficial recortado de `DOC/WhatsApp Image 2026-11-13 at 10.2ggg0.00 AM.jpeg` a `src/assets/images/logo-emblema.png` y usado en `Logo.tsx` (reemplaza el dibujo SVG aproximado).
+- `PROJECTS_LIST` reducida a 4 obras documentadas por las fotos y láminas; sin cifras, años, estados ni clientes inventados. Campos opcionales y filtros retirados.
+- Quitadas afirmaciones sin respaldo: "100% cumplimiento SG-SST" (inicio y brochure) y "plazos y presupuesto garantizado".
+- `npm run lint` y `npm run build` pasan. La extensión de Chrome no conectó: sin revisión visual.

@@ -2,6 +2,7 @@ import imgMetalmecanica from '../assets/images/servicio-metalmecanica.jpg';
 import imgVias from '../assets/images/servicio-vias.jpg';
 import imgRoceria from '../assets/images/servicio-roceria.jpg';
 import imgObrasElectricas from '../assets/images/servicio-obras-electricas.jpg';
+import imgCanalAlamosa from '../assets/images/canal-alamosa-obra.jpeg';
 import imgObraCivil from '../assets/images/servicio-obra-civil.jpg';
 
 export interface Service {
@@ -20,16 +21,16 @@ export interface Service {
 export interface Project {
   id: string;
   title: string;
-  client: string;
+  client?: string;
   contractTag: string;
   location: string;
-  category: 'civil' | 'vial' | 'hidraulica' | 'facilidades' | 'social';
+  category: 'civil' | 'vial' | 'electricas';
   summary: string;
   fullDescription: string;
-  metrics: { label: string; value: string }[];
+  metrics?: { label: string; value: string }[];
   image?: string;
-  year: string;
-  status: 'Completado' | 'En Ejecución';
+  year?: string;
+  status?: 'Completado' | 'En Ejecución';
 }
 
 export interface ClientPartner {
@@ -143,60 +144,44 @@ export const SERVICES_LIST: Service[] = [
 
 export const PROJECTS_LIST: Project[] = [
   {
-    id: "calenturitas-talleres",
-    title: "Ampliación Talleres de Mantenimiento - Mina Calenturitas",
-    client: "Sector Minero Carbón Cesar",
-    contractTag: "MINA CALENTURITAS, CESAR",
-    location: "La Jagua de Ibirico / El Paso, Cesar",
+    id: "canal-alamosa",
+    title: "Canal Alamosa",
+    contractTag: "OBRA CIVIL",
+    location: "Mina Drummond",
     category: "civil",
-    summary: "Adecuación de terreno, excavación a cielo abierto y cimentaciones para soporte de talleres de maquinaria pesada en complejo minero.",
-    fullDescription: "Proyecto de alta exigencia geotécnica consistente en el movimiento masivo de 45,000 m³ de tierra, estabilización con pedraplén y fundición de losas reforzadas de alto espesor para soportar el tránsito de camiones mineros de 240 toneladas. Incluyó drenajes subterráneos y redes eléctricas industriales.",
-    metrics: [
-      { label: "Volumen Movido", value: "45,000 m³" },
-      { label: "Área Intervenida", value: "18,500 m²" },
-      { label: "Tiempo de Ejecución", value: "5 Meses" },
-      { label: "Cero Accidentes", value: "100% Cumplido" }
-    ],
-    image: "/src/assets/images/excavation_mining_1792186837961.jpg",
-    year: "2023 - 2024",
-    status: "Completado"
+    summary: "Instalación de estructuras prefabricadas de concreto tipo cajón para el canal Alamosa, con cuadrilla y maquinaria en sitio.",
+    fullDescription: "Obra civil de canal con instalación de módulos prefabricados de concreto en excavación, ejecutada por personal de Giraldo Ramírez con maquinaria de movimiento de tierras. Ubicación indicada en el material de la empresa: Mina Drummond.",
+    image: imgCanalAlamosa
   },
   {
-    id: "campamento-bosconia",
-    title: "Oficinas y Campamento de Producción en Bosconia",
-    client: "Operación Propia & Aliados",
-    contractTag: "FACILIDADES OPERATIVAS",
-    location: "Bosconia, Cesar",
-    category: "facilidades",
-    summary: "Adecuación de oficinas operativas, bodegas y talleres para almacenamiento de repuestos y despacho de cuadrillas de campo en el centro del Cesar.",
-    fullDescription: "Centro logístico estratégico que sirve de soporte para las cuadrillas que atienden emergencias viales y mantenimiento minero. Cuenta con patio de maquinaria pesada, planta eléctrica de emergencia, almacén de herramientas certificadas y estación de abastecimiento seguro de combustible.",
-    metrics: [
-      { label: "Área de Patio", value: "8,000 m²" },
-      { label: "Capacidad de Alojamiento", value: "40 Técnicos" },
-      { label: "Talleres Mecánicos", value: "2 Bahías" },
-      { label: "Autonomía", value: "24/7 Operativo" }
-    ],
-    year: "2022 - Activo",
-    status: "Completado"
+    id: "vivienda-antes-despues",
+    title: "Construcción de vivienda: antes y después",
+    contractTag: "OBRA CIVIL",
+    location: "Por confirmar",
+    category: "civil",
+    summary: "Vivienda llevada desde la obra negra en mampostería y concreto hasta su terminación con acabados y pintura.",
+    fullDescription: "Registro del avance de una vivienda, desde la estructura en ladrillo y columnas de concreto hasta la obra terminada con fachada pintada, ventanería y piso en baldosa.",
+    image: imgObraCivil
   },
   {
-    id: "vivienda-social",
-    title: "Proyecto Habitacional e Infraestructura Social",
-    client: "Comunidades y Entidades Aliadas",
-    contractTag: "VIVIENDA Y COMUNIDAD",
-    location: "Norte del Cesar y Guajira",
-    category: "social",
-    summary: "Construcción de viviendas de interés social y salones comunales con acabados en mampostería reforzada, cubierta termoacústica y redes de servicios básicos.",
-    fullDescription: "Entrega de unidades habitacionales dignas para familias reasentadas o vulnerables. El diseño contempló arquitectura bioclimática con ventilación cruzada, porches frontales en baldosín cerámico, instalaciones hidrosanitarias completas con pozo séptico ecológico y conexión eléctrica normalizada.",
-    metrics: [
-      { label: "Viviendas Entregadas", value: "32 Unidades" },
-      { label: "Área por Vivienda", value: "64 m²" },
-      { label: "Beneficiarios Directos", value: "140 Personas" },
-      { label: "Mano de Obra Local", value: "70% Contratada" }
-    ],
-    image: "/src/assets/images/social_housing_project_1792186839294.jpg",
-    year: "2024",
-    status: "Completado"
+    id: "senalizacion-vial",
+    title: "Señalización de vías",
+    contractTag: "VÍAS Y SEÑALIZACIÓN",
+    location: "Navelena, Consol y Campamento Aguachica",
+    category: "vial",
+    summary: "Demarcación de pavimentos, zonas escolares, flechas direccionales y señales verticales de pare.",
+    fullDescription: "Trabajos de señalización vial horizontal y vertical en las instalaciones de Navelena, Consol y el Campamento Aguachica: demarcación de parqueaderos y pasos peatonales, zona escolar, flechas direccionales, palabra PARE y señal vertical.",
+    image: imgVias
+  },
+  {
+    id: "obras-electricas-yuma",
+    title: "Obras eléctricas: subestación y planta eléctrica",
+    contractTag: "OBRAS ELÉCTRICAS",
+    location: "Yuma, Navelena, Consol y otras sedes",
+    category: "electricas",
+    summary: "Subestación y planta eléctrica, instalaciones eléctricas, cableado estructurado, alumbrado y video wall.",
+    fullDescription: "Instalaciones eléctricas en varias sedes, entre ellas la subestación y planta eléctrica de Yuma, instalación de rack y cableado estructurado, alumbrado, instalaciones en Navelena y Consol y video wall.",
+    image: imgObrasElectricas
   }
 ];
 

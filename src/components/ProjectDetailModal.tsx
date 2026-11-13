@@ -51,9 +51,11 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-0.5 bg-[#d32f2f] rounded">
                 {project.contractTag}
               </span>
-              <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-600 rounded">
-                {project.status}
-              </span>
+              {project.status && (
+                <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-600 rounded">
+                  {project.status}
+                </span>
+              )}
             </div>
             <h3 className="text-xl sm:text-2xl font-black leading-snug">
               {project.title}
@@ -65,18 +67,22 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         <div className="p-6 overflow-y-auto space-y-6 text-slate-700 text-sm">
           {/* Metadata Row */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 text-xs">
-            <div>
-              <span className="text-slate-400 block font-semibold">Cliente / Entidad:</span>
-              <span className="font-bold text-[#0f2444]">{project.client}</span>
-            </div>
+            {project.client && (
+              <div>
+                <span className="text-slate-400 block font-semibold">Cliente / Entidad:</span>
+                <span className="font-bold text-[#0f2444]">{project.client}</span>
+              </div>
+            )}
             <div>
               <span className="text-slate-400 block font-semibold">Ubicación:</span>
               <span className="font-bold text-[#0f2444]">{project.location}</span>
             </div>
-            <div>
-              <span className="text-slate-400 block font-semibold">Vigencia / Periodo:</span>
-              <span className="font-bold text-[#0f2444]">{project.year}</span>
-            </div>
+            {project.year && (
+              <div>
+                <span className="text-slate-400 block font-semibold">Vigencia / Periodo:</span>
+                <span className="font-bold text-[#0f2444]">{project.year}</span>
+              </div>
+            )}
           </div>
 
           <div>
@@ -89,6 +95,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
           </div>
 
           {/* Key Metrics Grid */}
+          {project.metrics && project.metrics.length > 0 && (
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#0f2444] mb-3">
               Métricas Clave de Desempeño
@@ -106,6 +113,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               ))}
             </div>
           </div>
+          )}
         </div>
 
         {/* Footer Actions */}
