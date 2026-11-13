@@ -81,3 +81,8 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 ## [2026-11-13] corrección de puerto
 - La usuaria indicó que el puerto 3000 lo usa otra página ("Caseritos Valledupar"). Se verificó por el título. Las respuestas HTTP 200 de sesiones anteriores en ese puerto no validan esta landing.
 - Se levantó esta landing en `127.0.0.1:5180` (título correcto verificado). No se tocó el proceso del puerto 3000.
+
+## [2026-11-13] rediseño visual
+- Rediseño completo de portada, Nosotros, Servicios, Proyectos y Clientes con dirección "señalización vial y plano de obra". Detalle y motivos en [[decisiones]].
+- Verificación: `npm run lint` y `npm run build` pasan; detector de diseño sin hallazgos; capturas de escritorio (1440) y celular (390 real, vía marco) revisadas. Una primera captura móvil a 500 px era inválida y se repitió.
+- No se probó interacción ni se corrió revisor independiente.

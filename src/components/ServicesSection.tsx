@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Building2,
-  Compass,
-  Wrench,
-  Zap,
-  Truck,
-  ShieldAlert,
-  Paintbrush,
-  Fence,
-  Leaf,
-  ArrowRight
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { SERVICES_LIST, Service } from '../data/companyData';
 
 interface ServicesSectionProps {
@@ -22,115 +11,67 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   onSelectService,
   onRequestQuote,
 }) => {
-  const getServiceIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Building2':
-        return <Building2 className="w-5 h-5 text-[#0f2444]" />;
-      case 'Compass':
-        return <Compass className="w-5 h-5 text-[#0f2444]" />;
-      case 'Wrench':
-        return <Wrench className="w-5 h-5 text-[#0f2444]" />;
-      case 'Zap':
-        return <Zap className="w-5 h-5 text-[#0f2444]" />;
-      case 'Truck':
-        return <Truck className="w-5 h-5 text-[#0f2444]" />;
-      case 'ShieldAlert':
-        return <ShieldAlert className="w-5 h-5 text-[#0f2444]" />;
-      case 'Paintbrush':
-        return <Paintbrush className="w-5 h-5 text-[#0f2444]" />;
-      case 'Fence':
-        return <Fence className="w-5 h-5 text-[#0f2444]" />;
-      case 'Leaf':
-        return <Leaf className="w-5 h-5 text-[#0f2444]" />;
-      default:
-        return <Building2 className="w-5 h-5 text-[#0f2444]" />;
-    }
-  };
-
-  const filteredServices = SERVICES_LIST;
-
   return (
-    <section id="servicios" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header with CTA on right */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100">
-          <div className="max-w-3xl">
-            <div className="text-xs font-bold uppercase tracking-wider text-[#d32f2f] mb-2 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d32f2f]" />
-              <span>Servicios</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0f2444] tracking-tight leading-tight">
-              Nuestras cinco líneas de servicio
-            </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+    <section id="servicios" className="bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 sm:pb-24">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-end">
+          <h2 className="lg:col-span-7 text-5xl sm:text-6xl lg:text-7xl text-[#0f2444] leading-[0.95]">
+            Nuestras cinco líneas de servicio
+          </h2>
+          <div className="lg:col-span-5 lg:pb-2">
+            <p className="text-lg text-slate-700 leading-snug max-w-md">
               Cinco líneas de servicio: metalmecánica, vías y señalización, rocería, obras eléctricas y obra civil.
             </p>
+            <button
+              onClick={onRequestQuote}
+              className="mt-5 px-6 py-3.5 font-display uppercase tracking-wide text-base font-bold text-white bg-[#0f2444] hover:bg-[#d32f2f] transition-colors flex items-center gap-2.5 cursor-pointer"
+            >
+              <span>Solicitar propuesta por servicio</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
-
-          <button
-            onClick={onRequestQuote}
-            className="self-start lg:self-end px-5 py-3 text-xs sm:text-sm font-bold text-white bg-[#0f2444] hover:bg-[#000e27] active:scale-[0.98] transition-all rounded-lg shadow-sm flex items-center gap-2 shrink-0 cursor-pointer"
-          >
-            <span>Solicitar propuesta por servicio</span>
-            <ArrowRight className="w-4 h-4 text-slate-300" />
-          </button>
         </div>
 
-        {/* Cinco líneas de servicio */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:nth-child(4)]:lg:col-start-1">
-          {filteredServices.map((service) => (
-            <div
-              key={service.id}
-              onClick={() => onSelectService(service)}
-              className="group bg-white rounded-2xl border border-slate-200 hover:border-[#0f2444]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
-            >
-              <div>
-                {/* Image if available */}
-                {service.image ? (
-                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+        {/* Composición asimétrica: dos líneas grandes y tres medianas */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-6 gap-3 sm:gap-4">
+          {SERVICES_LIST.map((service, index) => {
+            const grande = index < 2;
+            return (
+              <button
+                key={service.id}
+                type="button"
+                onClick={() => onSelectService(service)}
+                className={`group flex flex-col text-left overflow-hidden bg-[#0f2444] text-white cursor-pointer ${
+                  grande ? 'md:col-span-3' : 'md:col-span-2'
+                }`}
+              >
+                <div className="relative overflow-hidden aspect-[3/2] bg-[#000e27]">
+                  {service.image && (
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#000e27]/80 backdrop-blur-sm rounded text-[10px] font-bold text-white uppercase tracking-wider">
-                      {service.category}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="p-6 pb-0 flex items-center justify-between">
-                    <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center group-hover:bg-[#0f2444] group-hover:text-white transition-colors">
-                      {getServiceIcon(service.iconName)}
-                    </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-600">
-                      {service.category}
-                    </span>
-                  </div>
-                )}
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-[#0f2444] group-hover:text-[#d32f2f] transition-colors leading-snug">
+                  )}
+                </div>
+                <div className="relative flex-1 p-5 sm:p-6 border-t-[6px] border-[#d32f2f] group-hover:border-white transition-colors">
+                  <h3 className={`${grande ? 'text-4xl sm:text-5xl' : 'text-3xl sm:text-4xl'} leading-[0.95]`}>
                     {service.title}
                   </h3>
-                  <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
+                  <p className="mt-2 text-base text-white/85 leading-snug max-w-md">
                     {service.description}
                   </p>
+                  <span className="mt-4 inline-flex items-center gap-2 font-display uppercase tracking-wide text-sm font-bold">
+                    Ver detalle y contactar
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
-              </div>
-
-              {/* Card Footer Link */}
-              <div className="px-6 pb-6 pt-2">
-                <div className="flex items-center justify-between text-xs font-bold text-[#0f2444] group-hover:text-[#d32f2f] border-t border-slate-100 pt-3 transition-colors">
-                  <span>Ver detalle y contactar</span>
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </div>
-          ))}
+              </button>
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

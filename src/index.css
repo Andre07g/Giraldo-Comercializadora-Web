@@ -1,16 +1,72 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Barlow Condensed', 'Barlow', system-ui, sans-serif;
   --color-primary: #000e27;
   --color-primary-navy: #0f2444;
   --color-secondary-red: #d32f2f;
   --color-secondary-crimson: #b6171e;
   --color-surface-soft: #f8f9ff;
   --color-border-subtle: #e2e8f0;
+
+  /* Esquinas rectas: identidad de obra, no de app */
+  --radius-xs: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+
+  /* Sombras: casi inexistentes; la profundidad la dan las fotos y los bloques de color */
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: 0 1px 0 rgba(0,14,39,.12);
+  --shadow-lg: 0 2px 0 rgba(0,14,39,.16);
+  --shadow-xl: 0 3px 0 rgba(0,14,39,.18);
+  --shadow-2xl: 0 4px 0 rgba(0,14,39,.2);
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
+
+body { font-family: var(--font-sans); color: #0f2444; }
+
+/* Títulos con voz de letrero vial */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 1.02;
+  font-weight: 700;
+  text-wrap: balance;
+}
+h2 { font-weight: 800; }
+
+/* Franja diagonal roja y blanca de barrera vial */
+.barrera {
+  height: 10px;
+  background: repeating-linear-gradient(-45deg, #d32f2f 0 14px, #ffffff 14px 28px);
+}
+.barrera-navy {
+  height: 10px;
+  background: repeating-linear-gradient(-45deg, #d32f2f 0 14px, #0f2444 14px 28px);
+}
+
+/* Detalles del navegador con la paleta de la marca */
+::selection { background: #d32f2f; color: #fff; }
+:focus-visible { outline: 3px solid #d32f2f; outline-offset: 3px; }
+html { scrollbar-color: #0f2444 #e8ecf4; }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: #e8ecf4; }
+::-webkit-scrollbar-thumb { background: #0f2444; border: 2px solid #e8ecf4; }
+::-webkit-scrollbar-thumb:hover { background: #d32f2f; }
+
+/* Entrada de las fotos: una sola, sobria */
+@keyframes revelar { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+.revelar { animation: revelar .9s cubic-bezier(.16,1,.3,1) both; }
+@media (prefers-reduced-motion: reduce) { .revelar { animation: none; } html { scroll-behavior: auto; } }

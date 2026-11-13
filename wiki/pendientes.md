@@ -45,3 +45,9 @@ fuentes: ["DOC/", "src/data/companyData.ts", "index.html"]
 - **Resuelto 2026-11-13:** Clientes: solo nombres con respaldo en `DOC/` (Drummond, Ecopetrol, Prodeco, Yuma, Navelena, Consol) y descripciones que salen de las fotos y láminas. **Pendiente:** autorización formal de uso de marcas de Drummond, Ecopetrol y Prodeco (la usuaria autorizó nombres en las láminas: Yuma, Navelena, Consol); el alcance de Prodeco no consta.
 - **Resuelto:** Noticias retirada del sitio (formulario falso de suscripción que no enviaba el correo y boletines inexistentes). El archivo `src/components/NewsSection.tsx` se conserva sin usar. Para reactivarla haría falta decidir el canal real.
 - **Decisión de la usuaria:** la ubicación de la vivienda no es obligatoria; no se muestra. Revisión visual: si la extensión no se puede conectar, esperar.
+
+## Tras el rediseño (2026-11-13)
+- **Pendiente:** Contacto, formulario, pie y ventanas emergentes (servicio, proyecto, cotización, brochure) conservan la estructura anterior; solo heredan tipografía y esquinas rectas. Rediseñarlos si se quiere uniformidad total.
+- **Pendiente:** las láminas de vías y obras eléctricas traen rótulos propios; ideal reemplazarlas por fotos individuales.
+- **Pendiente:** revisión final independiente y DESIGN.md del rediseño no se hicieron. Capturas con Edge sin cabeza (escritorio 1440 y celular 390); no se probó interacción (clics, modales, formulario).
+- **Pendiente:** texto "Calidad... ensayos de laboratorio certificados", "operadores certificados" y el lema "Solidez y Cumplimiento" del prototipo no tienen fuente; revisar con la usuaria.

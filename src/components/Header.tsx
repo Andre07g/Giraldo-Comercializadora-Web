@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
             <span className="text-white/30">|</span>
             <span>Valledupar · La Loma · Bosconia</span>
             <span className="text-white/30">|</span>
-            <span>Atención: Lun - Vie 8:00 AM - 6:00 PM</span>
+            <span>Lun - Vie 8:00 a.m. - 12:00 m. / 2:00 p.m. - 5:30 p.m.</span>
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <a
@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-200 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md py-3 border-b border-slate-200'
+            ? 'bg-white shadow-md py-3 border-b border-slate-200'
             : 'bg-white py-4 border-b border-slate-200'
         }`}
       >
@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
           </a>
 
           {/* Zone 2: Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-7 text-base font-display uppercase tracking-wide font-semibold text-[#0f2444]">
             {navLinks.map((link) => (
               <a
                 key={link.label}

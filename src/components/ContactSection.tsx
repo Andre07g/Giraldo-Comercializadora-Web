@@ -59,10 +59,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
-          <div className="text-xs font-bold uppercase tracking-wider text-[#d32f2f] mb-2 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#d32f2f]" />
-            <span>Atención Empresarial y Cotizaciones</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0f2444] tracking-tight leading-tight">
             Hablemos de su próximo proyecto
           </h2>

@@ -26,3 +26,10 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 ## 2026-11-13 · Noticias retirada; ubicación opcional
 - **Decisión (propia, reversible):** se quitó la sección Noticias porque su formulario simulaba una suscripción sin enviar datos y prometía boletines inexistentes. Fuente: revisión de `src/components/NewsSection.tsx`.
 - **Confirmado por la usuaria:** no es necesario mostrar la ubicación de la vivienda; misión/visión en espera.
+
+## 2026-11-13 · Rediseño visual: señalización vial y plano de obra
+- **Motivo (usuaria):** "se ve extremadamente genérica y hecha por IA... quita esos estilos genéricos o planos". Se mantuvieron textos, fotos, logo y colores (azul `#0f2444`, rojo `#d32f2f`).
+- **Decisión (propia, reversible con Git):** tipografía Barlow Condensed (títulos en mayúsculas) y Barlow (texto), de letrero vial; esquinas rectas y sombras casi nulas (variables de tema en `src/index.css`); franja diagonal roja y blanca de barrera vial entre secciones; fotos grandes y a color; sin etiquetitas sobre los títulos, sin tarjetas con íconos, sin filtros de pestañas.
+- **Archivos tocados:** `src/index.css`, `index.html` (fuentes), `Hero`, `AboutSection`, `ServicesSection`, `ProjectsSection`, `ClientsSection`, `Header`, `ContactSection` (solo se quitó una etiqueta).
+- **Retirado por falta de respaldo:** insignias de la portada (RUT verificado, Empresa Contratista de Éxito, SST & Calidad, "15+ años", "Público y Privado"), recuadro "Certificaciones y evaluaciones oficiales" y la línea "Plan estratégico quinquenal · vigencia 2024-2029". Ver [[pendientes]] para certificaciones.
+- **Corregido:** el horario de la barra superior decía 6:00 p. m.; ahora coincide con el confirmado.
