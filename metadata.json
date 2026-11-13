@@ -1,0 +1,6 @@
+{
+  "name": "Giraldo Ramírez Comercializadora Ltda.",
+  "description": "Soluciones integrales en ingeniería civil, obras viales, redes eléctricas, obras hidráulicas y servicios ambientales en Valledupar y la región Caribe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
