@@ -33,6 +33,7 @@ fuentes: ["package.json", "README.md", "AGENTS.md"]
 
 - 2026-11-13: sección de servicios con las cinco líneas y fotos reales; NIT y horario corregidos. Compila; sin revisión visual.
 - 2026-11-13: logo oficial, proyectos documentados y claims sin respaldo retirados. Compila; sin revisión visual (extensión de Chrome sin conexión).
+- **Corrección 2026-11-13:** el puerto 3000 lo ocupa otra página ("Caseritos Valledupar"), por eso las comprobaciones HTTP 200 anteriores en `127.0.0.1:3000` no probaban esta landing. Para ver esta página: `npx vite --port=5180 --host=127.0.0.1 --strictPort` y abrir `http://127.0.0.1:5180/` (el título debe ser «Giraldo Ramírez Comercializadora Ltda.»). No usar `npm run dev` mientras el 3000 esté ocupado.
 
 ## Próximo paso
 - Seguir el Plan de Mejoras en orden. Paso 2 (logo y fotos propias) es el más avanzado: falta el logo oficial y decidir qué fotos son reales. Ver [[pendientes]].
