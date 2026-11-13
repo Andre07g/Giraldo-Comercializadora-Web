@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Building2,
   Compass,
@@ -22,8 +22,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   onSelectService,
   onRequestQuote,
 }) => {
-  const [selectedFilter, setSelectedFilter] = useState<'all' | 'obras' | 'vial' | 'especializados'>('all');
-
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
       case 'Building2':
@@ -49,19 +47,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
     }
   };
 
-  const filteredServices = SERVICES_LIST.filter((service) => {
-    if (selectedFilter === 'all') return true;
-    if (selectedFilter === 'obras') {
-      return ['obras-civiles', 'gestion-proyectos', 'obras-hidromecanicas', 'obras-hidraulicas'].includes(service.id);
-    }
-    if (selectedFilter === 'vial') {
-      return ['mantenimiento-vias', 'cercas-perimetrales'].includes(service.id);
-    }
-    if (selectedFilter === 'especializados') {
-      return ['redes-electricas', 'pintura-acabados', 'proyectos-ambientales'].includes(service.id);
-    }
-    return true;
-  });
+  const filteredServices = SERVICES_LIST;
 
   return (
     <section id="servicios" className="py-20 bg-white">
@@ -71,15 +57,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           <div className="max-w-3xl">
             <div className="text-xs font-bold uppercase tracking-wider text-[#d32f2f] mb-2 flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d32f2f]" />
-              <span>Soluciones Integrales en Ingeniería</span>
+              <span>Servicios</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0f2444] tracking-tight leading-tight">
-              Soluciones integrales en ingeniería y construcción
+              Nuestras cinco líneas de servicio
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-              Desarrollamos soluciones globales en toda la cadena de ingeniería civil e industrial: movimiento de tierras,
-              obra civil, redes eléctricas, obras hidráulicas, mantenimiento vial y servicios ambientales con maquinaria propia
-              y personal calificado.
+              Cinco líneas de servicio: metalmecánica, vías y señalización, rocería, obras eléctricas y obra civil.
             </p>
           </div>
 
@@ -92,52 +76,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           </button>
         </div>
 
-        {/* Interactive Filter Tabs */}
-        <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2">
-          <button
-            onClick={() => setSelectedFilter('all')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              selectedFilter === 'all'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Todos los Servicios (9)
-          </button>
-          <button
-            onClick={() => setSelectedFilter('obras')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              selectedFilter === 'obras'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Obras Civiles e Hidráulicas
-          </button>
-          <button
-            onClick={() => setSelectedFilter('vial')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              selectedFilter === 'vial'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Infraestructura Vial & Cercas
-          </button>
-          <button
-            onClick={() => setSelectedFilter('especializados')}
-            className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap cursor-pointer ${
-              selectedFilter === 'especializados'
-                ? 'bg-[#0f2444] text-white shadow-sm'
-                : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-            }`}
-          >
-            Redes Eléctricas & Especiales
-          </button>
-        </div>
-
-        {/* 3x3 Grid of Services */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cinco líneas de servicio */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>*:nth-child(4)]:lg:col-start-1">
           {filteredServices.map((service) => (
             <div
               key={service.id}
@@ -183,7 +123,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
               {/* Card Footer Link */}
               <div className="px-6 pb-6 pt-2">
                 <div className="flex items-center justify-between text-xs font-bold text-[#0f2444] group-hover:text-[#d32f2f] border-t border-slate-100 pt-3 transition-colors">
-                  <span>Consultar este servicio</span>
+                  <span>Ver detalle y contactar</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>

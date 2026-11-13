@@ -31,6 +31,8 @@ fuentes: ["package.json", "README.md", "AGENTS.md"]
 - Git: repositorio local; ya hay identidad de autor configurada. Primer commit creado el 2026-11-13 con el código y la wiki (sin `DOC/` ni `Plan de Mejoras/`).
 - 2026-11-13: se ingresó material nuevo (3 imágenes y 3 videos de WhatsApp; paquete `Plan de Mejoras/`). `npm run lint` y `npm run build` siguen pasando. El servidor local no estaba activo al iniciar la sesión.
 
+- 2026-11-13: sección de servicios con las cinco líneas y fotos reales; NIT y horario corregidos. Compila; sin revisión visual.
+
 ## Próximo paso
 - Seguir el Plan de Mejoras en orden. Paso 2 (logo y fotos propias) es el más avanzado: falta el logo oficial y decidir qué fotos son reales. Ver [[pendientes]].
 - Revisar visualmente la vista previa en escritorio y móvil; confirmar los datos empresariales pendientes antes de cambios de contenido. Ver [[pendientes]].

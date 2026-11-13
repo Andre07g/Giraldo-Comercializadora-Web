@@ -16,8 +16,8 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4">
             <Logo variant="light" className="mb-4" />
             <p className="text-slate-300 text-sm font-light mt-3 max-w-sm leading-relaxed">
-              {COMPANY_INFO.slogan} Soluciones integrales en obras civiles, redes eléctricas,
-              infraestructura vial, obras hidráulicas y servicios ambientales.
+              {COMPANY_INFO.slogan} Metalmecánica, vías y señalización, rocería,
+              obras eléctricas y obra civil.
             </p>
             <div className="mt-4 text-xs text-slate-400 font-medium">
               NIT: {COMPANY_INFO.nit} · Registro Mercantil Valledupar

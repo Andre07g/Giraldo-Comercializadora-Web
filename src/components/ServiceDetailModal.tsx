@@ -95,6 +95,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
           </div>
 
           {/* Maquinaria & Normatividad */}
+          {(service.equipment?.length || service.norms?.length) ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div className="bg-[#eff4ff] p-4 rounded-xl border border-blue-100">
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#0f2444] mb-2 flex items-center gap-1.5">
@@ -102,7 +103,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                 <span>Maquinaria & Equipos</span>
               </h4>
               <ul className="text-xs text-slate-600 space-y-1">
-                {service.equipment.map((eq, i) => (
+                {service.equipment?.map((eq, i) => (
                   <li key={i} className="flex items-center gap-1.5">
                     <span className="text-[#0f2444] font-bold">·</span>
                     <span>{eq}</span>
@@ -117,7 +118,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
                 <span>Normas Técnicas Aplicables</span>
               </h4>
               <ul className="text-xs text-slate-600 space-y-1">
-                {service.norms.map((norm, i) => (
+                {service.norms?.map((norm, i) => (
                   <li key={i} className="flex items-center gap-1.5">
                     <span className="text-[#d32f2f] font-bold">·</span>
                     <span>{norm}</span>
@@ -126,6 +127,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
               </ul>
             </div>
           </div>
+          ) : null}
         </div>
 
         {/* Footer Actions */}

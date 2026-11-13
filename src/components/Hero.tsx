@@ -43,8 +43,8 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
 
         {/* Value Proposition */}
         <p className="mt-5 text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl font-normal leading-relaxed text-balance">
-          Soluciones integrales en ingeniería civil, obras civiles, redes eléctricas, infraestructura vial,
-          mantenimientos y servicios ambientales con los más altos estándares técnicos y normativos.
+          Metalmecánica, vías y señalización, rocería, obras eléctricas y obra civil,
+          con personal calificado.
         </p>
 
         {/* Action Buttons */}

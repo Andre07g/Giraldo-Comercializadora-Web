@@ -57,3 +57,10 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 - Se catalogaron 8 imágenes nuevas (rocería, fumigación, cuadrilla, 2 logos, láminas de vías y obras eléctricas) en [[documentos-y-activos]].
 - Código: NIT corregido en 3 archivos; horario de L–V unificado a 5:30 p. m. en datos y pie de página (el pie y el contacto no coincidían). `npm run lint` y `npm run build` pasan. Sin revisión visual.
 - Pendiente de este paso: sección de servicios con las 5 líneas y fotos reales (paso 4 del plan).
+
+## [2026-11-13] servicios | Cinco líneas con fotos reales
+- La usuaria confirmó: logo oficial con NIT `...289-2`, horario de lunes a viernes, permiso para nombres de terceros y usar las láminas.
+- `src/data/companyData.ts`: lista reducida a Metalmecánica, Vías y Señalización, Rocería, Obras Eléctricas y Obra Civil, con textos del portafolio y fotos de `DOC/` (copias aligeradas `servicio-*.jpg`). Equipo y normas ahora opcionales; el modal los oculta si faltan.
+- `ServicesSection.tsx`: sin filtros de 9 servicios, textos de cabecera, Hero y pie ajustados a las cinco líneas.
+- Corregí un intercambio en el catálogo entre `33333.jpeg` y `20eee26...jpeg`.
+- `npm run lint` y `npm run build` pasan. Navegador no conectado: sin revisión visual.

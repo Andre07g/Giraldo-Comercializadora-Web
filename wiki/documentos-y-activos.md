@@ -61,14 +61,24 @@ fuentes: ["DOC/", "C:/Users/Windows/Desktop/PROTOTIPO WEB/FOTO EMPRESA GIRALDO R
 La usuaria confirmó que las imágenes de WhatsApp (fachada, antes/después) **son reales y trabajos de la empresa**. Autenticidad: confirmada por la usuaria.
 | Ruta original | Categoría y observación visual | Posible uso | Estado |
 |---|---|---|---|
-| `DOC/WhatsApp Image 2026-11-13 at 10.19.59 AM.jpeg` | Rocería: operario con machete cortando maleza/ramas. | Línea rocería (corte de maleza). | Vista. Lista para usar (comprimir). |
-| `DOC/WhatsApp Image 20eee26-11-13 at 10.20.01 AM.jpeg` | Operario en traje blanco fumigando junto a tanques. Control de vegetación. | Línea rocería/mantenimiento de áreas. | Vista. Lugar/cliente no identificado. |
+| `DOC/WhatsApp Image 2026-11-13 at 10.19.59 AM.jpeg` | Rocería: operario con machete cortando maleza/ramas. | Línea rocería (corte de maleza). | Vista. Usada en la web (2026-11-13). |
+| `DOC/33333.jpeg` | Operario en traje blanco fumigando junto a tanques. Control de vegetación. | Línea rocería/mantenimiento de áreas. | Vista. Lugar/cliente no identificado. Sin usar aún. |
 | `DOC/WhatsApp Image 2026-11-13 at 10.20.00 ffffffAM.jpeg` | Cuadrilla uniformada con casco y chaleco en la vía, con supervisora. | Equipo / vías. | Vista. |
 | `DOC/WhatsApp Image 2026-11-13 at 10.20.00 AM.jpeg` | **Logo** horizontal con NIT `900302280-2`, web, correo, teléfono fijo y celular. | Logo, pero con NIT viejo: no usar tal cual. | Vista. Versión con NIT erróneo. |
 | `DOC/WhatsApp Image 2026-11-13 at 10.2ggg0.00 AM.jpeg` | **Logo** horizontal con NIT `900302289-2` y correo `gr.comercializadora1@gmail.com`, sin teléfonos. | Candidato a logo oficial (NIT correcto). Calidad media. | Vista. Pendiente confirmar que es el oficial. |
-| `DOC/WhatsApp Image 2026-11-13 at eeee10.20.01 AM.jpeg` | Lámina "Señalización de vías": 8 fotos (Navelena, Consol, Campamento Aguachica). Parece composición gráfica. | Línea vías. Contiene marcas de terceros. | Vista. Autorización de marcas pendiente. |
+| `DOC/WhatsApp Image 2026-11-13 at eeee10.20.01 AM.jpeg` | Lámina "Señalización de vías": 8 fotos (Navelena, Consol, Campamento Aguachica). Parece composición gráfica. | Línea vías. Contiene nombres de terceros. | Vista. Usada en la web (2026-11-13); la usuaria autorizó mostrar los nombres. |
 | `DOC/rrr.jpeg` | Lámina "Obras eléctricas" con 10 trabajos (Yuma, Navelena, Consol, etc.). | Línea obras eléctricas. Marcas de terceros. | Vista. Autorización pendiente. |
-| `DOC/33333.jpeg` | Lámina "Obras eléctricas": subestación/planta eléctrica con tanque y cerca. | Línea obras eléctricas. | Vista. |
+| `DOC/WhatsApp Image 20eee26-11-13 at 10.20.01 AM.jpeg` | Lámina "Obras eléctricas": subestación/planta eléctrica con tanque y cerca. | Línea obras eléctricas. | Vista. Usada en la web (2026-11-13). Corrección: en la primera versión del catálogo estaban intercambiados con `33333.jpeg`. |
+
+## Copias técnicas de servicios (2026-11-13)
+Redimensionadas a máx. 1200 px, JPEG calidad 82. Originales intactos.
+| Ruta del proyecto | Original |
+|---|---|
+| `src/assets/images/servicio-metalmecanica.jpg` | `DOC/FOTO 6 SOLDADURA .jpg` |
+| `src/assets/images/servicio-vias.jpg` | `DOC/WhatsApp Image 2026-11-13 at eeee10.20.01 AM.jpeg` |
+| `src/assets/images/servicio-roceria.jpg` | `DOC/WhatsApp Image 2026-11-13 at 10.19.59 AM.jpeg` |
+| `src/assets/images/servicio-obras-electricas.jpg` | `DOC/WhatsApp Image 20eee26-11-13 at 10.20.01 AM.jpeg` |
+| `src/assets/images/servicio-obra-civil.jpg` | `DOC/WhatsApp Image 2026-11-12 at 5.08.2zxczz7 PM.jpeg` (antes/después de vivienda) |
 
 ## Activos existentes en el sitio
 | Ruta del proyecto | Uso actual | Referencia original |

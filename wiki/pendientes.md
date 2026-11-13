@@ -21,7 +21,7 @@ fuentes: ["DOC/", "src/data/companyData.ts", "index.html"]
 
 ## Del Plan de Mejoras (paquete del facilitador, 2026-11-13)
 - **Resuelto:** la línea es «Rocería» (limpieza y corte de maleza, poda de árboles).
-- **Resuelto:** horario 8:00–12:00 y 2:00–5:30 p. m. Confirmar que es de lunes a viernes (la usuaria no escribió los días).
+- **Resuelto:** horario 8:00–12:00 y 2:00–5:30 p. m. Confirmado lunes a viernes por la usuaria.
 - **Pendiente:** misión y visión del documento institucional, con horizonte 2029 (el plan lo pide; el brief decía 2028). Documento institucional no localizado en `DOC/`.
 - **Pendiente:** logo oficial en buena calidad y fotos reales por cada una de las cinco líneas (metalmecánica, vías, rocería, obras eléctricas, obra civil); ya hay láminas de obras eléctricas y señalización de vías, pero son composiciones con marcas de terceros; falta decidir cómo usarlas.
 - **Pendiente:** para la política de datos: NIT confirmado, dirección y correo para temas de datos.
@@ -35,3 +35,10 @@ fuentes: ["DOC/", "src/data/companyData.ts", "index.html"]
 - **Confirmado:** ya existe identidad de Git (`user.name`); se puede crear el primer commit.
 - **Pendiente:** confirmar estado del sitio público/publicación.
 - **Pendiente:** evaluar en otra conversación si se desea reemplazar o retirar las afirmaciones restantes del portafolio que no estén sustentadas por fuentes aprobadas. No se presentaron como verificadas en este cambio.
+
+## Tras el paso 4 (2026-11-13)
+- **Pendiente:** revisar visualmente las cinco tarjetas y el modal en escritorio y móvil (el navegador no estaba conectado).
+- **Pendiente:** la lámina de vías y la de obras eléctricas son composiciones con letras; ampliarlas muestra baja nitidez. Mejor reemplazar por fotos individuales cuando existan.
+- **Pendiente:** la sección Proyectos y las métricas siguen con contenido heredado del prototipo (cifras, Calenturitas, etc.) sin fuente; sus imágenes usan rutas `/src/assets/...` que no funcionan en el sitio compilado.
+- **Pendiente:** poner el logo oficial (NIT `...289-2`) en la cabecera; hoy el logo es el del prototipo.
+- **Pendiente:** misión y visión: falta el documento institucional.
