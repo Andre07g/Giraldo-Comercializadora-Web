@@ -25,7 +25,6 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
     { label: 'Servicios', href: '#servicios' },
     { label: 'Clientes', href: '#clientes' },
     { label: 'Proyectos', href: '#proyectos' },
-    { label: 'Noticias', href: '#noticias' },
     { label: 'Contáctanos', href: '#contacto' },
   ];
 

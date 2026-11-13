@@ -22,3 +22,7 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 - **Decisión (confirmada, Plan de Mejoras paso 4):** la sección muestra solo metalmecánica, vías y señalización, rocería, obras eléctricas y obra civil. Se retiraron las 9 tarjetas anteriores y los bloques de maquinaria y normas, porque no tenían respaldo en fuentes.
 - **Fuente de textos:** política del portafolio (`DOC/EDITV22Portafolio Gr Comercializadora ANTERIOR.pdf`) y descripción de rocería dada por la usuaria. Los textos son cortos y sin cifras.
 - **Confirmado por la usuaria:** se pueden mostrar los nombres de terceros (Yuma, Navelena, Consol) y usar las láminas porque no hay fotos individuales. Logo oficial: el de NIT `900302289-2`.
+
+## 2026-11-13 · Noticias retirada; ubicación opcional
+- **Decisión (propia, reversible):** se quitó la sección Noticias porque su formulario simulaba una suscripción sin enviar datos y prometía boletines inexistentes. Fuente: revisión de `src/components/NewsSection.tsx`.
+- **Confirmado por la usuaria:** no es necesario mostrar la ubicación de la vivienda; misión/visión en espera.

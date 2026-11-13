@@ -23,7 +23,7 @@ export interface Project {
   title: string;
   client?: string;
   contractTag: string;
-  location: string;
+  location?: string;
   category: 'civil' | 'vial' | 'electricas';
   summary: string;
   fullDescription: string;
@@ -35,7 +35,7 @@ export interface Project {
 
 export interface ClientPartner {
   name: string;
-  scope: string;
+  scope?: string;
   category: 'principal' | 'relevante';
   iconType: string;
 }
@@ -157,7 +157,6 @@ export const PROJECTS_LIST: Project[] = [
     id: "vivienda-antes-despues",
     title: "Construcción de vivienda: antes y después",
     contractTag: "OBRA CIVIL",
-    location: "Por confirmar",
     category: "civil",
     summary: "Vivienda llevada desde la obra negra en mampostería y concreto hasta su terminación con acabados y pintura.",
     fullDescription: "Registro del avance de una vivienda, desde la estructura en ladrillo y columnas de concreto hasta la obra terminada con fachada pintada, ventanería y piso en baldosa.",
@@ -186,24 +185,12 @@ export const PROJECTS_LIST: Project[] = [
 ];
 
 export const CLIENT_PARTNERS: ClientPartner[] = [
-  {
-    name: "Drummond Ltd.",
-    scope: "Operaciones mineras y soporte en el Cesar",
-    category: "principal",
-    iconType: "mining"
-  },
-  {
-    name: "Prodeco",
-    scope: "Sector minero y gestión ambiental de frentes de explotación",
-    category: "relevante",
-    iconType: "mining"
-  },
-  {
-    name: "Ecopetrol",
-    scope: "Red de transporte de hidrocarburos y facilidades auxiliares",
-    category: "relevante",
-    iconType: "energy"
-  },
+  { name: "Drummond Ltd.", scope: "Canal Alamosa", category: "principal", iconType: "mining" },
+  { name: "Ecopetrol", scope: "Rocería", category: "relevante", iconType: "energy" },
+  { name: "Prodeco", category: "relevante", iconType: "mining" },
+  { name: "Yuma", scope: "Obras eléctricas", category: "relevante", iconType: "energy" },
+  { name: "Navelena", scope: "Señalización y obras eléctricas", category: "relevante", iconType: "civil" },
+  { name: "Consol", scope: "Señalización y obras eléctricas", category: "relevante", iconType: "civil" },
 ];
 
 export const CORPORATE_VALUES = [

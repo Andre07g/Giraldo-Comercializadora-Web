@@ -80,10 +80,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </p>
 
                   <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                    <span className="flex items-center gap-1 truncate max-w-[200px]">
-                      <MapPin className="w-3.5 h-3.5 text-[#d32f2f] shrink-0" />
-                      <span className="truncate">{project.location}</span>
-                    </span>
+                    {project.location ? (
+                      <span className="flex items-center gap-1 truncate max-w-[200px]">
+                        <MapPin className="w-3.5 h-3.5 text-[#d32f2f] shrink-0" />
+                        <span className="truncate">{project.location}</span>
+                      </span>
+                    ) : <span />}
                     {project.year && (
                       <span className="flex items-center gap-1 font-semibold text-slate-700 shrink-0">
                         <Calendar className="w-3.5 h-3.5 text-slate-400" />

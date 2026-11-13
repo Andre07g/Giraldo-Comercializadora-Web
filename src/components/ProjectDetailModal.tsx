@@ -73,10 +73,12 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
                 <span className="font-bold text-[#0f2444]">{project.client}</span>
               </div>
             )}
-            <div>
-              <span className="text-slate-400 block font-semibold">Ubicación:</span>
-              <span className="font-bold text-[#0f2444]">{project.location}</span>
-            </div>
+            {project.location && (
+              <div>
+                <span className="text-slate-400 block font-semibold">Ubicación:</span>
+                <span className="font-bold text-[#0f2444]">{project.location}</span>
+              </div>
+            )}
             {project.year && (
               <div>
                 <span className="text-slate-400 block font-semibold">Vigencia / Periodo:</span>

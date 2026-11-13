@@ -146,7 +146,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({
                     <div key={p.id} className="p-2.5 bg-slate-50 rounded-lg flex items-center justify-between">
                       <div>
                         <span className="font-bold text-[#0f2444]">{p.title}</span>
-                        <span className="text-slate-500 text-[11px] block">{p.location}</span>
+                        <span className="text-slate-500 text-[11px] block">{p.location ?? p.contractTag}</span>
                       </div>
                     </div>
                   ))}

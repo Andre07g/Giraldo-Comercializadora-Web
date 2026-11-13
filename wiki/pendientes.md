@@ -39,6 +39,9 @@ fuentes: ["DOC/", "src/data/companyData.ts", "index.html"]
 ## Tras el paso 4 (2026-11-13)
 - **Pendiente:** revisar visualmente las cinco tarjetas y el modal en escritorio y móvil (el navegador no estaba conectado).
 - **Pendiente:** la lámina de vías y la de obras eléctricas son composiciones con letras; ampliarlas muestra baja nitidez. Mejor reemplazar por fotos individuales cuando existan.
-- **Resuelto 2026-11-13:** Proyectos reescrito con 4 obras documentadas (Canal Alamosa, vivienda, señalización, obras eléctricas), sin cifras, años ni estados. **Pendiente:** ubicación de la vivienda, clientes y fechas reales. Siguen por revisar Clientes y Noticias (contenido del prototipo).
+- **Resuelto 2026-11-13:** Proyectos reescrito con 4 obras documentadas (Canal Alamosa, vivienda, señalización, obras eléctricas), sin cifras, años ni estados. **Pendiente:** ubicación de la vivienda, clientes y fechas reales. Clientes revisado (ver abajo).
 - **Resuelto:** emblema oficial en cabecera y pie (recorte del logo NIT `...289-2`); el texto sigue como texto. Revisar visualmente.
-- **Pendiente:** misión y visión: falta el documento institucional.
+- **Pendiente:** misión y visión: falta el documento institucional (la usuaria dejó este punto en espera, 2026-11-13).
+- **Resuelto 2026-11-13:** Clientes: solo nombres con respaldo en `DOC/` (Drummond, Ecopetrol, Prodeco, Yuma, Navelena, Consol) y descripciones que salen de las fotos y láminas. **Pendiente:** autorización formal de uso de marcas de Drummond, Ecopetrol y Prodeco (la usuaria autorizó nombres en las láminas: Yuma, Navelena, Consol); el alcance de Prodeco no consta.
+- **Resuelto:** Noticias retirada del sitio (formulario falso de suscripción que no enviaba el correo y boletines inexistentes). El archivo `src/components/NewsSection.tsx` se conserva sin usar. Para reactivarla haría falta decidir el canal real.
+- **Decisión de la usuaria:** la ubicación de la vivienda no es obligatoria; no se muestra. Revisión visual: si la extensión no se puede conectar, esperar.

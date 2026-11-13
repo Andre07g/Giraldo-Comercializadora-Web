@@ -29,14 +29,13 @@ export const ClientsSection: React.FC = () => {
         <div className="max-w-3xl text-center mx-auto mb-12">
           <div className="text-xs font-bold uppercase tracking-wider text-[#d32f2f] mb-2 inline-flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#d32f2f]" />
-            <span>Relaciones que Construyen Confianza</span>
+            <span>Clientes</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0f2444] tracking-tight leading-tight">
-            Relaciones que construyen confianza
+            Empresas con las que hemos trabajado
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed text-balance">
-            Hemos participado en proyectos estratégicos con empresas de los sectores minero, vial,
-            energético e industrial en el norte de Colombia y el Magdalena Medio.
+            Empresas para las que hemos realizado trabajos.
           </p>
         </div>
 
@@ -53,9 +52,11 @@ export const ClientsSection: React.FC = () => {
               <h3 className="text-base sm:text-lg font-bold text-[#0f2444]">
                 {client.name}
               </h3>
-              <p className="mt-1 text-xs text-slate-500 leading-relaxed">
-                {client.scope}
-              </p>
+              {client.scope && (
+                <p className="mt-1 text-xs text-slate-500 leading-relaxed">
+                  {client.scope}
+                </p>
+              )}
             </div>
           ))}
         </div>
@@ -63,7 +64,7 @@ export const ClientsSection: React.FC = () => {
         {/* Row 2: Secondary Institutional Partners */}
         <div className="mt-8">
           <div className="text-center text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-            Experiencia con empresas y proyectos relevantes
+            Otras empresas
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {secondaryClients.map((client) => (
@@ -74,9 +75,11 @@ export const ClientsSection: React.FC = () => {
                 <div className="text-sm font-bold text-[#0f2444]">
                   {client.name}
                 </div>
-                <div className="text-[11px] text-slate-500 mt-0.5">
-                  {client.scope}
-                </div>
+                {client.scope && (
+                  <div className="text-[11px] text-slate-500 mt-0.5">
+                    {client.scope}
+                  </div>
+                )}
               </div>
             ))}
           </div>

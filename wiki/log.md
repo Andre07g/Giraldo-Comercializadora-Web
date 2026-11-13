@@ -70,3 +70,10 @@ fuentes: ["AGENTS.md", "DOC/", "package.json"]
 - `PROJECTS_LIST` reducida a 4 obras documentadas por las fotos y láminas; sin cifras, años, estados ni clientes inventados. Campos opcionales y filtros retirados.
 - Quitadas afirmaciones sin respaldo: "100% cumplimiento SG-SST" (inicio y brochure) y "plazos y presupuesto garantizado".
 - `npm run lint` y `npm run build` pasan. La extensión de Chrome no conectó: sin revisión visual.
+
+## [2026-11-13] clientes, noticias y ubicación
+- Respuesta de la usuaria: la ubicación de la vivienda no se exige; misión/visión queda en espera; la revisión visual espera si la extensión no conecta.
+- Ubicación, cliente, año y estado de proyectos ahora son opcionales y no se muestran si faltan.
+- Clientes: lista reducida a nombres con respaldo en `DOC/` y alcances tomados de fotos/láminas; quitado texto genérico de "proyectos estratégicos... Magdalena Medio".
+- Noticias: quitada de la página, cabecera y pie (el formulario mostraba "Suscripción confirmada" sin enviar nada).
+- `npm run lint` y `npm run build` pasan. Sin revisión visual.
