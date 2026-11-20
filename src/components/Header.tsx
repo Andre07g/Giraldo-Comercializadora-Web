@@ -25,6 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
     { label: 'Servicios', href: '#servicios' },
     { label: 'Clientes', href: '#clientes' },
     { label: 'Proyectos', href: '#proyectos' },
+    { label: 'Videos', href: '#videos' },
     { label: 'Contáctanos', href: '#contacto' },
   ];
 
@@ -78,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
           </a>
 
           {/* Zone 2: Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-base font-display uppercase tracking-wide font-semibold text-[#0f2444]">
+          <nav className="hidden xl:flex items-center gap-7 text-base font-display uppercase tracking-wide font-semibold text-[#0f2444]">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -104,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-700 hover:text-[#0f2444] hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
+              className="xl:hidden p-2 text-slate-700 hover:text-[#0f2444] hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
               aria-label="Abrir menú de navegación"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -114,7 +115,7 @@ export const Header: React.FC<HeaderProps> = ({ onRequestQuote }) => {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-b border-slate-200 shadow-xl px-4 py-4 animate-in slide-in-from-top duration-200">
+          <div className="xl:hidden bg-white border-b border-slate-200 shadow-xl px-4 py-4 animate-in slide-in-from-top duration-200">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a

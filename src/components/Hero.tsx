@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
     <section id="inicio" className="bg-[#0f2444] text-white">
       <div className="grid lg:grid-cols-12 lg:min-h-[640px]">
         {/* Foto de obra, a color y sin velo: es la prueba */}
-        <figure className="relative order-1 lg:order-2 lg:col-span-7 h-[300px] sm:h-[420px] lg:h-auto overflow-hidden bg-[#000e27]">
+        <figure className="relative order-1 lg:order-2 lg:col-span-6 h-[300px] sm:h-[420px] lg:h-auto overflow-hidden bg-[#000e27]">
           <img
             src={canalWorkImage}
             alt="Cuadrilla y maquinaria en una obra de canal"
@@ -29,12 +29,12 @@ export const Hero: React.FC<HeroProps> = ({ onRequestQuote }) => {
         </figure>
 
         {/* Bloque de mensaje */}
-        <div className="order-2 lg:order-1 lg:col-span-5 flex flex-col justify-center px-5 sm:px-10 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-12 sm:py-16">
+        <div className="order-2 lg:order-1 lg:col-span-6 min-w-0 flex flex-col justify-center px-5 sm:px-10 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-12 sm:py-16">
           <p className="font-display uppercase tracking-[0.08em] text-sm sm:text-base font-semibold text-white/70">
             NIT {COMPANY_INFO.nit} · Valledupar, Cesar
           </p>
 
-          <h1 className="mt-5 text-[3.25rem] sm:text-7xl lg:text-[4.5rem] xl:text-[5rem] font-extrabold leading-[0.92] tracking-[-0.01em]">
+          <h1 className="mt-5 text-[clamp(2.6rem,12vw,3.25rem)] sm:text-7xl lg:text-[3.5rem] xl:text-[4.5rem] 2xl:text-[5rem] font-extrabold leading-[0.92] tracking-[-0.01em] [overflow-wrap:anywhere]">
             Construyendo para un <span className="underline decoration-[#d32f2f] decoration-[6px] underline-offset-[10px]">futuro mejor.</span>
           </h1>
 

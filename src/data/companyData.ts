@@ -220,3 +220,17 @@ export const CORPORATE_VALUES = [
     iconName: "Users"
   }
 ];
+
+// Videos de la empresa en YouTube (enviados por la empresa el 18/11/2026).
+// "vertical" = formato Shorts (9:16). Sin títulos: no se inventa qué muestra cada uno.
+export interface CompanyVideo {
+  id: string;
+  vertical: boolean;
+}
+
+export const VIDEOS_LIST: CompanyVideo[] = [
+  { id: 'FHZXfY6ErQo', vertical: false },
+  { id: 'WagooBAktTw', vertical: true },
+  { id: 'wxcglcR0WFk', vertical: true },
+  { id: 'Jlw8kKtm7QU', vertical: true },
+];

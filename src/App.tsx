@@ -10,6 +10,7 @@ import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ClientsSection } from './components/ClientsSection';
 import { ProjectsSection } from './components/ProjectsSection';
+import { VideosSection } from './components/VideosSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
@@ -73,7 +74,8 @@ export default function App() {
           onRequestQuote={() => handleOpenQuote()}
         />
 
-        {/* News & Bulletins */}
+        {/* Videos de la empresa */}
+        <VideosSection />
 
         {/* Contact, Headquarters and Quick Quote Form */}
         <ContactSection
